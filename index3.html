@@ -16,7 +16,9 @@
                 }
                 .logo1 {
                   max-width: 100px;
+                  border-radius: 100%;
                 }
+                
               </style>
             </head>
         <body>
@@ -25,26 +27,24 @@
               <a href="index3.html" class="logo">Useful Knowledge </a>
               <nav class="navigation">
                 <img src="img/logo1.jpg" alt="Logo1" class="logo1">
-
                 <a href="index.html">Login</a>
                 <a href="index2.html">Signup</a>
-
-                  
-        
-         
                 </nav>
             </header>
           <section>
             <link rel="stylesheet" href="stayyyl.css">
-<body>
-
+          </section>
+        </body>
+        
+        <body>
         <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-         
-           <title>Search Bar with Result Prediction</title>
+          <title>Search Bar with Result Prediction</title>
+          <head>
             <style>
               .search-wrapper {
                 text-align: center;
                 margin-top: 20px;
+                border-radius: 5px;
               }
               .search-wrapper input[type="text"] {
                 width: 300px;
@@ -66,17 +66,22 @@
               .search-predictions li:hover {
                 background-color: #f2f2f2;
               }
+              @media only screen and (max-width: 600px) {
+                .search-wrapper input[type="text"] {
+                  width: 100%;
+                }
+              }
             </style>
           </head>
+          
           <body>
             <div class="search-wrapper">
-              <input type="text" id="searchInput" placeholder="Search . . ." oninput="showPredictions()">
+              <input type="text" id="searchInput" placeholder="Search . . ." > <!--oninput="showPredictions()"-->
             </div>
 
             <div class="search-predictions">
               <ul id="predictionsList"></ul>
             </div>
-
             <script>
               var contentData = [
                 "computer engineering",
@@ -128,25 +133,32 @@
             <div class="formbg2-outer">
               <div class="formbg2">
                 <div class="formbg2-inner padding-horizontal--48 ">
-
-                  <style>   #object1 {
-                    object-fit: contain;
-                    object-position:top ;
-                    position:relative;
-            
-                   } 
-
-                     </style>
-                 
-       
-                  <form id="stripe-login">
-                   
-                    <div class="field padding-bottom--40">
-
-                        <div>
-                          <a href="index4.html"><img  src="img/enginer2.jpg" alt="img/enginer2" width="190" height="190" id="object1" ><a href="index5.html"><img src="img/DataAnylis.jpg" alt="img/DataAnylis" height ="180" weidth = "180" id="object1"  ><a href="index6.html"><img src="img/math.jpg" alt="img/math" height ="180" weidth = "180" id="object1"  ></a>
-                  
-               
+                  <style>
+                    #object1 {
+                      display: contents;
+                      flex-direction: row; /* الصور جنبًا إلى جنب */
+                      justify-content: space-around;
+                      flex-wrap: wrap;
+                    }
+                    #object2, #object3, #object4 {
+                      object-fit:contain;
+                      width: 30%;
+                      height: auto;
+                    }
+                    @media only screen and (max-width: 600px) {
+                      #object1 {
+                        flex-direction: column; /* الصور في خط طولي عندما يكون حجم الشاشة أقل من 600 بكسل */
+                      }
+                      
+                      #object2, #object3, #object4 {
+                        width: 100%;
+                      }
+                    }
+                  </style>
+                  <div id="object1">
+                    <a href="index4.html"><img src="img/enginer2.jpg" alt="img/enginer2" id="object2"></a>
+                    <a href="index5.html"><img src="img/DataAnylis.jpg" alt="img/DataAnylis" id="object3"></a>
+                    <a href="index6.html"><img src="img/math.jpg" alt="img/math" id="object4"></a>
+                  </div>
 </body>
-
 </html>
