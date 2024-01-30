@@ -44,14 +44,6 @@
             text-decoration: none;
             color: #333;
         }
-        /* Main section styling */
-        .box-root {
-        padding-top: 120px;
-        padding-bottom: 24px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; /* This will put space between your iframes */
-        }
         #object1 {
         object-fit: contain;
         object-position: top;
@@ -59,18 +51,24 @@
         border-radius: 10px;
         margin: 10px;
         }
-        .board {
+        /* Main section styling */
+        .box-root {
+        padding-top: 60px;
+        padding-bottom: 0px;
+        display: flex;
+        justify-content: space-around; /* This will put space between your iframes */
+        }
+        .board, .rate {
         align-items: right;
         display: flex; /* Changed from inline-flexbox to flex */
-        padding: 10px 60px;
+        padding: 10px 50px;
         background-color: #122e4b; /* Button background color */
         justify-content: right;
         color: #fff;
         text-decoration: none;
         border-radius: 5px;
         align-items:right;
-        margin: 100px;
-        margin-top: 10px;
+        margin: 0px; /* Adjust this value as needed */
         cursor: pointer;
         width: fit-content;
         }
@@ -90,8 +88,11 @@
         <!-- Main content section -->
         <div class="box-root">
             <iframe width="420" height="315" src="https://www.youtube.com/embed/p-PN3rRaPWM?si=tzA2BksFtgsMHzKY" title="Group thuri"></iframe>
-            <iframe src="index7.html" width="250" height="400" class="board"></iframe>
         </div>
+        <div class="box-root">
+            <iframe src="index7.html" width="250" height="400" class="board"></iframe>
+            <iframe src="rate.html" width="400" height="400" class="rate"></iframe>
+        </div> 
     </section>
 </body>
 </html>
