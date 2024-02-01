@@ -146,12 +146,6 @@ aside .name-data {
 .data-card .img img {
   width: 30%;
 }
-
-.data-detail div {
-  color: white !important;
-  direction: rtl;
-}
-
 .data-detail .name {
   margin: 12px 0px;
   text-align: center;
@@ -613,12 +607,6 @@ th {
   flex-wrap: wrap;
 }
 
-.level_box {
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-}
-
 .pd-top {
   padding-top: 2rem;
 }
@@ -709,11 +697,6 @@ div#sectionusers {
 .add-subjects {
   width: 25% !important;
 }
-
-tbody:hover {
-  filter: brightness(1) !important;
-}
-
 tr:hover {
   background-color: #3877ac !important;
 }
