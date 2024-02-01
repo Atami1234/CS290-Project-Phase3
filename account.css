@@ -93,7 +93,6 @@ p {
   position: relative;
   transition: 0.3s ease-in-out all;
   transform: scale(1);
-  position: absolute;
   top: 0px;
   max-height: 100%;
   overflow-y: scroll;
@@ -814,7 +813,6 @@ tr:nth-child(even) {
     margin: 0 0;
     display: block !important;
     padding: 0 0 !important;
-    margin: 4rem 0 !important;
     max-width: 100% !important;
     overflow-y: scroll;
 
