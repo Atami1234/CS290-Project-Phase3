@@ -1,162 +1,262 @@
 <!DOCTYPE>
 <html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
-            <link rel="stylesheet" href="stayl.css">
-            <title>Website with Centered Logo</title>
-              <style>
-                header {
-                  display: flex;
-                  justify-content: last baseline;
-                  align-items: center;
-                }
-                .logo1 {
-                  max-width: 100px;
-                  border-radius: 100%;
-                }
-                .search-wrapper {
-                text-align: center;
-                margin-top: 20px;
-                border-radius: 5px;
-                }
-                .search-wrapper input[type="text"] {
-                  width: 300px;
-                  padding: 5px;
-                  font-size: 16px;
-                }
-                .search-predictions {
-                  margin-top: 10px;
-                  text-align: center;
-                }
-                .search-predictions ul {
-                  list-style: none;
-                  padding: 0;
-                }
-                .search-predictions li {
-                  cursor: pointer;
-                  margin-bottom: 5px;
-                }
-                .search-predictions li:hover {
-                  background-color: #f2f2f2;
-                }
-                @media only screen and (max-width: 600px) {
-                  .search-wrapper input[type="text"] {
-                    width: 100%;
-                  }
-                }
-              </style>
-            </head>
-        <body>
-            <header>
-              
-              <a href="index3.html" class="logo">Useful Knowledge </a>
-              <nav class="navigation">
-                <img src="img/logo1.jpg" alt="Logo1" class="logo1">
-                <a href="index.html">Login</a>
-                <a href="index2.html">Signup</a>
-                </nav>
-            </header>
-          <section>
-            <link rel="stylesheet" href="stayyyl.css">
-          </section>
-        </body>
-        
-        <body>
-        <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-          <title>Search Bar with Result Prediction</title>
-          <body>
-            <div class="search-wrapper">
-              <input type="text" id="searchInput" placeholder="Search . . ." > <!--oninput="showPredictions()"-->
-            </div>
+<html lang="en">
 
-            <div class="search-predictions">
-              <ul id="predictionsList"></ul>
-            </div>
-            <script>
-              var contentData = [
-                "computer engineering",
-                "data anaylis",
-                "mathmatics"
-              ];
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
 
-              function showPredictions() {
-                var input = document.getElementById("searchInput").value.toLowerCase();
-                var predictionsList = document.getElementById("predictionsList");
-                predictionsList.innerHTML = "";
+  <link rel="stylesheet" href="stayl.css">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="account.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="preloader.css">
+  <link rel="stylesheet" href="missing-account.css">
 
-                var matchingPredictions = contentData.filter(function(item) {
-                  return item.toLowerCase().startsWith(input);
-                });
+  <title>Website with Centered Logo</title>
+  <style>
+    header {
+      display: flex;
+      justify-content: last baseline;
+      align-items: center;
+    }
 
-                if (matchingPredictions.length > 0) {
-                  matchingPredictions.forEach(function(prediction) {
-                    var li = document.createElement("li");
-                    li.textContent = prediction;
-                    li.onclick = function() {
-                      performSearch(prediction);
-                    };
-                    predictionsList.appendChild(li);
-                  });
-                } else {
-                  var li = document.createElement("li");
-                  li.textContent = "No predictions found.";
-                  predictionsList.appendChild(li);
-                }
-              }
+    .logo1 {
+      max-width: 100px;
+      border-radius: 100%;
+    }
 
-              function performSearch(query) {
-                // Replace this with your desired implementation
-                alert("indergurgh" + ali);
-              }
-            
-                function performSearch() {
-                  var input = document.getElementById("searchInput").value.trim();
-                  if (input !== "") {
-                    var url = "results.html?q=" + encodeURIComponent(input);
-                    window.location.href = url;
-                  }
-                }
-              </script>
-            <!--</script> was found with out script opining--> 
-              </form>
-            </div>
-            <div class="formbg2-outer">
-              <div class="formbg2">
-                <div class="formbg2-inner padding-horizontal--48 ">
-                  <style>
-                    #object1 {
-                      display: contents;
-                      flex-direction: row; /* الصور جنبًا إلى جنب */
-                      justify-content: space-around;
-                      flex-wrap: wrap;
-                    }
-                    
-                    #object2, #object3, #object4 {
-                      object-fit:contain;
-                      width: 30%;
-                      height: auto;
-                    }
-                    
-                    @media only screen and (max-width: 600px) {
-                      #object1 {
-                        flex-direction: column; /* الصور في خط طولي عندما يكون حجم الشاشة أقل من 600 بكسل */
-                      }
-                      
-                      #object2, #object3, #object4 {
-                        width: 100%;
-                      }
-                    }
-                  </style>
-                  
-                  <div id="object1">
-                    <a href="index4.html"><img src="img/enginer2.jpg" alt="img/enginer2" id="object2"></a>
-                    <a href="index5.html"><img src="img/DataAnylis.jpg" alt="img/DataAnylis" id="object3"></a>
-                    <a href="index6.html"><img src="img/math.jpg" alt="img/math" id="object4"></a>
-                  </div>
-                  
+    .search-wrapper {
+      text-align: center;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .search-wrapper input[type="text"] {
+      width: 300px;
+      padding: 5px;
+      font-size: 16px;
+    }
+
+    .search-predictions {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .search-predictions ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .search-predictions li {
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .search-predictions li:hover {
+      background-color: #f2f2f2;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .search-wrapper input[type="text"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+
+    <a href="index3.html" class="logo">Useful Knowledge </a>
+    <nav class="navigation">
+      <img src="img/logo1.jpg" alt="Logo1" class="logo1">
+      <a href="index.html">Login</a>
+      <a href="index2.html">Signup</a>
+    </nav>
+  </header>
+  <section>
+    <link rel="stylesheet" href="stayyyl.css">
+  </section>
 </body>
+
+<body>
+  <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
+    <title>Search Bar with Result Prediction</title>
+
+    <body>
+      <div class="search-wrapper">
+        <input type="text" id="searchInput" placeholder="Search . . .">
+        <!--oninput="showPredictions()"-->
+      </div>
+
+      <div class="search-predictions">
+        <ul id="predictionsList"></ul>
+      </div>
+      <script>
+        var contentData = [
+          "computer engineering",
+          "data anaylis",
+          "mathmatics"
+        ];
+
+        function showPredictions() {
+          var input = document.getElementById("searchInput").value.toLowerCase();
+          var predictionsList = document.getElementById("predictionsList");
+          predictionsList.innerHTML = "";
+
+          var matchingPredictions = contentData.filter(function (item) {
+            return item.toLowerCase().startsWith(input);
+          });
+
+          if (matchingPredictions.length > 0) {
+            matchingPredictions.forEach(function (prediction) {
+              var li = document.createElement("li");
+              li.textContent = prediction;
+              li.onclick = function () {
+                performSearch(prediction);
+              };
+              predictionsList.appendChild(li);
+            });
+          } else {
+            var li = document.createElement("li");
+            li.textContent = "No predictions found.";
+            predictionsList.appendChild(li);
+          }
+        }
+
+        function performSearch(query) {
+          // Replace this with your desired implementation
+          alert("indergurgh" + ali);
+        }
+
+        function performSearch() {
+          var input = document.getElementById("searchInput").value.trim();
+          if (input !== "") {
+            var url = "results.html?q=" + encodeURIComponent(input);
+            window.location.href = url;
+          }
+        }
+      </script>
+      <!--</script> was found with out script opining-->
+      </form>
+  </div>
+  <div class="formbg2-outer">
+    <div class="formbg2">
+      <div class="formbg2-inner padding-horizontal--48 ">
+        <style>
+          #object1 {
+            display: contents;
+            flex-direction: row;
+            /* الصور جنبًا إلى جنب */
+            justify-content: space-around;
+            flex-wrap: wrap;
+          }
+
+          #object2,
+          #object3,
+          #object4 {
+            object-fit: contain;
+            width: 30%;
+            height: auto;
+          }
+
+          #object5 {
+            display: contents;
+            flex-direction: row;
+            /* الصور جنبًا إلى جنب */
+            justify-content: space-around;
+            flex-wrap: wrap;
+          }
+
+          #BadG {
+            object-fit: fill;
+            width: 100%;
+            height: auto;
+            margin-top: 60px;
+          }
+
+
+          @media only screen and (max-width: 600px) {
+            #object1 {
+              flex-direction: column;
+              /* الصور في خط طولي عندما يكون حجم الشاشة أقل من 600 بكسل */
+            }
+
+            #object2,
+            #object3,
+            #object4 {
+              width: 100%;
+            }
+
+            #object5 {
+              flex-direction: column;
+              /* الصور في خط طولي عندما يكون حجم الشاشة أقل من 600 بكسل */
+            }
+
+          }
+
+          .ach {
+            align-items: right;
+            display: flex;
+            /* Changed from inline-flexbox to flex */
+            padding: 10px 50px;
+            background-color: #122e4b;
+            /* Button background color */
+            justify-content: right;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 0px;
+            /* Adjust this value as needed */
+            cursor: pointer;
+            width: fit-content;
+          }
+        </style>
+
+        <div id="object1">
+          <a href="account.html"><img src="img/enginer2.jpg" alt="img/enginer2" id="object2"></a>
+          <a href="index5.html"><img src="img/DataAnylis.jpg" alt="img/DataAnylis" id="object3"></a>
+          <a href="index6.html"><img src="img/math.jpg" alt="img/math" id="object4"></a>
+        </div>
+
+        <div id="object5">
+          <div class="badges" id="BadG">
+            <div class="title">
+              الشارات
+            </div>
+            <div class="prograss-number">
+              <div class="prograss-from">
+
+              </div>
+              <div class="prograss-to">
+                100%
+              </div>
+            </div>
+            <div class="prograss" id="prograss"></div>
+            <div class="badges-content">
+              <div class="badges-img">
+                <img id="Engineer" src="img/logoEng.png" alt="Englogo" width="180" height="90">
+                <div class="badge-title">
+                  ComputerEngineering
+                </div>
+              </div>
+              <div class="badges-img">
+                <img id="data" src="img/logoData.png" alt="datalogo" width="180" height="90">
+                <div class="badge-title">
+                  DataAnaylis
+                </div>
+              </div>
+              <div class="badges-img">
+                <img id="math" src="img/logomath.png" alt="mathlogo" width="180" height="90">
+                <div class="badge-title">
+                  Mathmatics
+                </div>
+              </div>
+
+
+</body>
+
 </html>
